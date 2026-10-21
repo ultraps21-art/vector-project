@@ -24,8 +24,11 @@ using namespace std;
 // Default constructor. Creates an empty vector: size 0, capacity 0, no
 // allocation.
 template <typename T>
-Vector<T>::Vector() : begin_(nullptr), end_(nullptr),
-end_cap_(nullptr) {}
+Vector<T>::Vector() {
+    begin_ = nullptr;
+    end_ = nullptr;
+    end_cap_ = nullptr;
+}
 
 // Creates a vector of n elements, each value-initialized (0 for int, "" for
 // std::string). Size and capacity are both n. Note that new T[n] does NOT
