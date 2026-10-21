@@ -38,7 +38,7 @@ Vector<T>::Vector() {
 // every type: it gives 0 for int, 0.0 for double, nullptr for pointers, ""
 // for std::string, and calls the default constructor for a class type.
 template <typename T>
-Vector<T>::Vector(std::size_t n) {
+Vector<T>::Vector(std::size_t n) : Vector() {
     if (n>0) {
         begin_ = new T[n];
         end_ = begin_ + n;
